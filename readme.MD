@@ -65,3 +65,13 @@ services:
   volumes:
     - /var/www:/var/www
  ```
+ ### Example 6
+ It picks up a image called **hello-world** from docker hub. And make a container named **mycon** with it.
+ ```
+version: '3'
+services:
+ testservice:
+  image: hello-world
+  container_name: mycon
+```
+
