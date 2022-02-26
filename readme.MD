@@ -20,7 +20,8 @@ services:
 ```
 
 ### example 3
-It will search a dockerfile named **Dockerfile** in **./one** directory. Then build that with **imgone** name and create a container named ***_servic-ename_1**.
+**First service -** It will search a dockerfile named **Dockerfile** in **./one** directory. Then build that with **imgone** name and create a container named ***_servic-ename_1**. <br/>
+**Second service -** It will search a dockerfile named **Dockerfile** in **./two** directory. Then build that with **imgtwo** name and create a container named ***_servic-ename_1**. <br/>
 ```
 version: '3'
 services:
@@ -30,6 +31,6 @@ services:
    image: imgone
  two:
    build:
-     context: ./two
+     context: ./two  # # It will search a dockerfile named Dockerfile in ./two directory. Then build that with imgtwo name and create a container named *_servic-ename_1.
    image: imgtwo
 ```
