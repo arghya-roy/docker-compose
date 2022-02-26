@@ -74,4 +74,20 @@ services:
   image: hello-world
   container_name: mycon
 ```
+### Example 7 
+ It picks up a image called **httpd** from docker hub. And make a container named **mycon** with it. And it **maps the 80 port of container with 80 port of host machine**. Set restart policy with **always**. and map the volume with host volume of **/var/www** with **/var/www** of container.
+
+
+```
+version: '3'
+services:
+ testservice:
+  container_name: mycon
+  image: httpd
+  ports: 
+    - 80:80
+  restart: always
+  volumes:
+    - /var/www:/var/www
+ ```
 
